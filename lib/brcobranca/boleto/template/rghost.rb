@@ -144,6 +144,7 @@ module Brcobranca
           move_more(doc, -4.25, 0.10)
           doc.image boleto.logotipo, x: "#{@x} cm", y: "#{@y} cm"
           # Dados
+          doc.show "Dados por pacotes"
           move_more(doc, 4.84, 0.0)
           doc.show "#{boleto.banco}-#{boleto.banco_dv}", tag: :maior
           move_more(doc, 2, 0)
