@@ -126,7 +126,7 @@ module Brcobranca
       # @return [String] 25 caracteres numéricos.
       def codigo_barras_segunda_parte
         case carteira.to_i
-        when 198, 106, 107, 122, 142, 143, 195, 196.109
+        when 198, 106, 107, 122, 142, 143, 195, 196,109
           dv = "#{carteira}#{nosso_numero}#{seu_numero}#{convenio}".modulo10
           
           "#{carteira}#{nosso_numero}#{seu_numero}#{convenio}#{dv}"
