@@ -129,7 +129,7 @@ module Brcobranca
       # Dígito verificador do banco
       # @return [Integer] 1 caracteres numéricos.
       def banco_dv
-        banco.modulo10
+        banco.modulo11
       end
 
       # Código da agencia
