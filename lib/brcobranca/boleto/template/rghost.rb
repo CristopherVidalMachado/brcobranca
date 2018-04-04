@@ -140,9 +140,9 @@ module Brcobranca
           # Pontos iniciais em x e y
           @x = 4.75
           @y = 20.77
-          move_more(doc, 2.25, 0.10)
-          doc.show "Dados por pacotes "
 
+          doc.moveto 3, 4
+          doc.show "Dados por pacotes "
           move_more(doc, -4.25, 0.10)
           doc.image boleto.logotipo, x: "#{@x} cm", y: "#{@y} cm"
           # Dados
