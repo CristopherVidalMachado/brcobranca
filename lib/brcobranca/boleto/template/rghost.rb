@@ -138,11 +138,13 @@ module Brcobranca
         def modelo_generico_cabecalho(doc, boleto)
           # INICIO Primeira parte do BOLETO
           # Pontos iniciais em x e y
+         
+          doc.moveto x: "3 cm", y:"4 cm"
+          doc.show "Dados por pacotes "
           @x = 4.75
           @y = 20.77
 
-          doc.moveto x: "3 cm", y:"4 cm"
-          doc.show "Dados por pacotes "
+
           move_more(doc, -4.25, 0.10)
           doc.image boleto.logotipo, x: "#{@x} cm", y: "#{@y} cm"
           # Dados
