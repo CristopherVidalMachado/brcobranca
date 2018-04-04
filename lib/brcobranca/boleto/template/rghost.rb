@@ -215,7 +215,7 @@ module Brcobranca
 
     
           move_more(doc, -14.2, -0.74)
-          doc.show "#{boleto.sacado} - #{boleto.sacado_documento.formata_documento}"
+          doc.show "#{boleto.sacado} - CPF/CNPJ: #{boleto.sacado_documento.formata_documento}"
 
 
 
