@@ -25,7 +25,7 @@ module Brcobranca
       #
       # @return [String] 3 caracteres numéricos.
       def banco
-        '341'
+        '128'
       end
 
       # Número do convênio/contrato do cliente junto ao banco.
