@@ -141,7 +141,7 @@ module Brcobranca
           @x = 4.75
           @y = 20.77
 
-          doc.moveto 3, 4
+          doc.moveto x: "3 cm", y:"4 cm"
           doc.show "Dados por pacotes "
           move_more(doc, -4.25, 0.10)
           doc.image boleto.logotipo, x: "#{@x} cm", y: "#{@y} cm"
