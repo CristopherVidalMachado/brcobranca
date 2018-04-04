@@ -140,7 +140,7 @@ module Brcobranca
           # Pontos iniciais em x e y
           @x = 4.75
           @y = 20.77
-          move_more(doc, -4.25, 0.10)
+          move_more(doc, 2.25, 0.10)
           doc.show "Dados por pacotes "
 
           move_more(doc, -4.25, 0.10)
