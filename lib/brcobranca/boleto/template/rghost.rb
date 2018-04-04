@@ -250,14 +250,9 @@ module Brcobranca
           doc.show boleto.data_vencimento.to_s_br if boleto.data_vencimento
 
           move_more(doc, -15.8, -0.8)
-          if boleto.cedente_endereco
-            doc.show boleto.cedente_endereco
-            move_more(doc, 1.2, 0.3)
-            doc.show boleto.cedente
-            move_more(doc, -1.2, -0.3)
-          else
-            doc.show boleto.cedente
-          end
+        
+          doc.show boleto.cedente
+        
 
           move_more(doc, 15.8, 0)
           doc.show boleto.agencia_conta_boleto
