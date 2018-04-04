@@ -131,7 +131,7 @@ module Brcobranca
           
           "#{carteira}#{nosso_numero}#{seu_numero}#{convenio}#{dv}"
         else
-          "#{carteira}#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}"
+          "000#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}"
         end
       end
     end
