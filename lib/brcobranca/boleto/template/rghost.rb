@@ -144,7 +144,7 @@ module Brcobranca
 
           doc.moveto x: "4.00 cm", y: "25.05 cm"
           doc.show boleto.codigo_barras.linha_digitavel
-          doc.moveto x: "2.30 cm", y: "24.53 cm"
+          doc.moveto x: "2.30 cm", y: "24.54 cm"
           doc.show boleto.valor_documento.to_currency
           
         
