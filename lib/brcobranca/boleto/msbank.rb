@@ -65,10 +65,10 @@ module Brcobranca
       #
       # @return [String] 1 caracteres numéricos.
       def nosso_numero_dv
-        
+        if %w(112 126 131 146 150 168 109).include?(carteira)
           "#{carteira}#{nosso_numero}".modulo10
 
-        
+        else
           
         end
       end
@@ -129,7 +129,8 @@ module Brcobranca
           barra_dv = "#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}".modulo10
           puts barra_dv
           "#{barra_dv}#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}"
-      end
+       
+      
     end
   end
 end
