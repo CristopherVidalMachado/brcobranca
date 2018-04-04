@@ -205,7 +205,7 @@ module Brcobranca
         puts codigo
         if codigo =~ /^(\d{4})(\d{39})$/
 
-          codigo_dv = codigo.modulo11(
+          codigo_dv = codigo.modulo10(
             multiplicador: (2..9).to_a,
             mapeamento: { 0 => 1, 10 => 1, 11 => 1 }
           ) { |t| 11 - (t % 11) }
