@@ -220,8 +220,7 @@ module Brcobranca
 
 
 
-          move_more(doc, 0, -0.8)
-          doc.show "#{boleto.sacado_endereco}"
+          # move_more(doc, 0, -0.8)
           if boleto.demonstrativo
             doc.text_area boleto.demonstrativo, width: '18.5 cm', text_align: :left, x: "#{@x - 0.8} cm", y: "#{@y - 0.9} cm", row_height: '0.4 cm'
           end
