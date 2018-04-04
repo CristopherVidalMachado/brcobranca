@@ -37,7 +37,7 @@ module Brcobranca
       # Conta corrente
       # @return [String] 5 caracteres numéricos.
       def conta_corrente=(valor)
-        @conta_corrente = valor.to_s.rjust(10, '0') if valor
+        @conta_corrente = valor.to_s.rjust(8, '0') if valor
       end
 
       # Número seqüencial utilizado para identificar o boleto.
