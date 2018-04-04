@@ -208,7 +208,7 @@ module Brcobranca
           codigo_dv = codigo.modulo10(
             multiplicador: (2..9).to_a,
             mapeamento: { 0 => 1, 10 => 1, 11 => 1 }
-          ) { |t| 11 - (t % 11) }
+          ) { |t| 10 - (t % 10) }
 
           codigo = "#{Regexp.last_match[1]}#{codigo_dv}#{Regexp.last_match[2]}"
           codigo
