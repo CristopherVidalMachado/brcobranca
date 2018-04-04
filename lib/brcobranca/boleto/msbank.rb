@@ -74,7 +74,7 @@ module Brcobranca
 
       # Calcula o dígito verificador para conta corrente do Msbank.
       # Retorna apenas o dígito verificador da conta ou nil caso seja impossível calcular.
-      def agencia_conta_corrente_dv
+      def conta_corrente_dv
         "#{conta_corrente}".modulo10
       end
 
@@ -91,7 +91,7 @@ module Brcobranca
       # @example
       #  boleto.agencia_conta_boleto #=> "0811 / 53678-8"
       def agencia_conta_boleto
-        "#{agencia} / #{conta_corrente}-#{agencia_conta_corrente_dv}"
+        "#{agencia} / #{conta_corrente}-#{conta_corrente_dv}"
       end
 
       # Segunda parte do código de barras.
@@ -130,7 +130,7 @@ module Brcobranca
           dv = "#{carteira}#{nosso_numero}#{seu_numero}#{convenio}".modulo10
           "#{carteira}#{nosso_numero}#{seu_numero}#{convenio}#{dv}0"
         else
-          "#{carteira}#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{agencia_conta_corrente_dv}000"
+          "#{carteira}#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}000"
         end
       end
     end
