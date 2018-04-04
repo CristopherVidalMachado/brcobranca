@@ -16,7 +16,7 @@ module Brcobranca
 
   class ValorInvalido < StandardError
   end
-
+# dd
   # Exception lançada quando os dados informados para o boleto estão inválidos.
   #
   # Você pode usar assim na sua aplicação:
