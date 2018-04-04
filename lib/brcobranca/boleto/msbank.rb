@@ -128,7 +128,7 @@ module Brcobranca
         case carteira.to_i
         when 198, 106, 107, 122, 142, 143, 195, 196.109
           dv = "#{carteira}#{nosso_numero}#{seu_numero}#{convenio}".modulo10
-          puts "Codigo_barras_segunda_parte: " "#{carteira}#{nosso_numero}#{seu_numero}#{convenio}#{dv}"
+          
           "#{carteira}#{nosso_numero}#{seu_numero}#{convenio}#{dv}"
         else
           "#{carteira}#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}"
