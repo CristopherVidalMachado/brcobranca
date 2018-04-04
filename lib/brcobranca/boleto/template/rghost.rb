@@ -138,56 +138,83 @@ module Brcobranca
         def modelo_generico_cabecalho(doc, boleto)
           # INICIO Primeira parte do BOLETO
           # Pontos iniciais em x e y
-          @x = 0.50
-          @y = 27.42
-          # LOGOTIPO do BANCO
+          @x = 4.75
+          @y = 20.77
+          
+          move_more(doc, -4.25, 0.10)
           doc.image boleto.logotipo, x: "#{@x} cm", y: "#{@y} cm"
           # Dados
-
-          move_more(doc, 4.84, 0.02)
+          move_more(doc, 4.84, 0.0)
           doc.show "#{boleto.banco}-#{boleto.banco_dv}", tag: :maior
           move_more(doc, 2, 0)
           doc.show boleto.codigo_barras.linha_digitavel, tag: :grande
-          move_more(doc, -6.5, -0.83)
+            
+        
+          
+
+
+          move_more(doc, -6.62, -1.05)
 
           doc.show boleto.cedente
 
-          move_more(doc, 15.8, 0)
+          move_more(doc, 8.84, 0)
           doc.show boleto.agencia_conta_boleto
 
-          move_more(doc, -15.8, -0.9)
-          doc.show boleto.cedente_endereco
-
-          move_more(doc, 15.8, 0)
-          doc.show boleto.nosso_numero_boleto
-
-          move_more(doc, -15.8, -0.8)
-          doc.show boleto.documento_numero
-
-          move_more(doc, 3.5, 0)
+          move_more(doc, 4.4, 0)
           doc.show boleto.especie
-
-          move_more(doc, 1.5, 0)
+          
+          move_more(doc, 1.25, 0)
           doc.show boleto.quantidade
 
-          move_more(doc, 2, 0)
-          doc.show "#{boleto.documento_cedente.formata_documento}"
+          move_more(doc, 1.5, 0)
+          doc.show boleto.nosso_numero_boleto
 
-          move_more(doc, 3.8, 0)
+          move_more(doc, -16.0,-0.85)
+          doc.show boleto.documento_numero
+          # doc.show boleto.documento_numero
+
+          move_more(doc, 5.70, 0)
+          doc.show "#{boleto.documento_cedente.formata_documento}"
+    
+
+          move_more(doc, 4.3, 0)
           doc.show boleto.data_vencimento.to_s_br
 
-          move_more(doc, 5, 0)
+
+          move_more(doc, 4.4, 0)
           doc.show boleto.valor_documento.to_currency
 
-          move_more(doc, -15, -1.3)
+
+          move_more(doc, -14.4, -0.85)
+          doc.show boleto.valor_documento.to_currency
+
+          move_more(doc, 3.4, 0)
+          doc.show boleto.valor_documento.to_currency
+          move_more(doc, 3.58, 0)
+          doc.show boleto.valor_documento.to_currency
+          move_more(doc, 3.6, 0)
+          doc.show boleto.valor_documento.to_currency
+
+          move_more(doc, 3.68, 0)
+          doc.show boleto.valor_documento.to_currency
+
+
+          # doc.show boleto.cedente_endereco
+
+
+    
+          move_more(doc, -14.2, -0.74)
           doc.show "#{boleto.sacado} - #{boleto.sacado_documento.formata_documento}"
 
-          move_more(doc, 0, -0.3)
+
+
+
+          move_more(doc, 0, -0.8)
           doc.show "#{boleto.sacado_endereco}"
           if boleto.demonstrativo
             doc.text_area boleto.demonstrativo, width: '18.5 cm', text_align: :left, x: "#{@x - 0.8} cm", y: "#{@y - 0.9} cm", row_height: '0.4 cm'
           end
-          # FIM Primeira parte do BOLETO
+         
         end
 
         # Monta o corpo e rodapé do layout do boleto
@@ -245,7 +272,7 @@ module Brcobranca
 
           move_more(doc, -12.1, -0.8)
           if boleto.variacao
-            doc.show "#{boleto.carteira}-#{boleto.variacao}"
+            doc.show "#{boleto.carteira}"
           else
             doc.show boleto.carteira
           end
