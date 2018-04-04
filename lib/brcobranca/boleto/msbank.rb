@@ -10,7 +10,7 @@ module Brcobranca
       validates_length_of :agencia, maximum: 4, message: 'deve ser menor ou igual a 4 dígitos.'
       validates_length_of :convenio, maximum: 5, message: 'deve ser menor ou igual a 5 dígitos.'
       validates_length_of :nosso_numero, maximum: 8, message: 'deve ser menor ou igual a 8 dígitos.'
-      validates_length_of :conta_corrente, maximum: 6, message: 'deve ser menor ou igual a 5 dígitos.'
+      validates_length_of :conta_corrente, maximum: 8, message: 'deve ser menor ou igual a 5 dígitos.'
       with_options if: :usa_seu_numero? do |v|
         v.validates_length_of :seu_numero, maximum: 7, message: 'deve ser menor ou igual a 7 dígitos.'
       end
@@ -37,7 +37,7 @@ module Brcobranca
       # Conta corrente
       # @return [String] 5 caracteres numéricos.
       def conta_corrente=(valor)
-        @conta_corrente = valor.to_s.rjust(6, '0') if valor
+        @conta_corrente = valor.to_s.rjust(8, '0') if valor
       end
 
       # Número seqüencial utilizado para identificar o boleto.
@@ -68,7 +68,7 @@ module Brcobranca
         if %w(112 126 131 146 150 168 109).include?(carteira)
           "#{carteira}#{nosso_numero}".modulo10
         else
-          "#{agencia}#{conta_corrente}#{carteira}#{nosso_numero}".modulo10
+          
         end
       end
 
