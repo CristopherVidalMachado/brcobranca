@@ -139,7 +139,7 @@ module Brcobranca
           # INICIO Primeira parte do BOLETO
           # Pontos iniciais em x e y
          
-          doc.moveto x: "8 cm", y:"8 cm"
+          doc.moveto x: "8 cm", y:"5 cm"
           doc.show "Dados por pacotes "
           @x = 4.75
           @y = 20.77
