@@ -3,7 +3,7 @@
 
 module Brcobranca
   module Boleto
-    class Itau < Base # Banco Itaú
+    class Msbank < Base # Banco Itaú
       # Usado somente em carteiras especiais com registro para complementar o número do cocumento
       attr_reader :seu_numero
 
@@ -14,7 +14,7 @@ module Brcobranca
       with_options if: :usa_seu_numero? do |v|
         v.validates_length_of :seu_numero, maximum: 7, message: 'deve ser menor ou igual a 7 dígitos.'
       end
-      # Nova instancia do Itau
+      # Nova instancia do Msbank
       # @param (see Brcobranca::Boleto::Base#initialize)
       def initialize(campos = {})
         campos = { carteira: '175' }.merge!(campos)
@@ -72,7 +72,7 @@ module Brcobranca
         end
       end
 
-      # Calcula o dígito verificador para conta corrente do Itau.
+      # Calcula o dígito verificador para conta corrente do Msbank.
       # Retorna apenas o dígito verificador da conta ou nil caso seja impossível calcular.
       def agencia_conta_corrente_dv
         "#{agencia}#{conta_corrente}".modulo10
