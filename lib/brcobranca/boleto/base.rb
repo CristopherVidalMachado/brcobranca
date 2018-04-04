@@ -181,7 +181,7 @@ module Brcobranca
       # Número da conta corrente
       # @return [String] 7 caracteres numéricos.
       def conta_corrente=(valor)
-        @conta_corrente = valor.to_s.rjust(7, '0') if valor
+        @conta_corrente = valor.to_s.rjust(8, '0') if valor
       end
 
       # Codigo de barras do boleto
@@ -200,7 +200,9 @@ module Brcobranca
       def codigo_barras
         raise Brcobranca::BoletoInvalido, self unless valid?
         codigo = codigo_barras_primeira_parte # 18 digitos
+        puts codigo
         codigo << codigo_barras_segunda_parte # 25 digitos
+        puts codigo
         if codigo =~ /^(\d{4})(\d{39})$/
 
           codigo_dv = codigo.modulo11(
