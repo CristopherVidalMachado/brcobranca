@@ -67,7 +67,7 @@ module Brcobranca
       def nosso_numero_dv
         if %w(112 126 131 146 150 168 109).include?(carteira)
           "#{carteira}#{nosso_numero}".modulo10
-          
+
         else
           
         end
@@ -132,7 +132,8 @@ module Brcobranca
           
           "#{carteira}#{nosso_numero}#{seu_numero}#{convenio}#{dv}"
         else
-          "0#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}"
+          dv_barras = "#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}".modulo10
+          "#{dv_barras}#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}"
         end
       end
     end
