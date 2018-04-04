@@ -3,7 +3,7 @@
 
 module Brcobranca
   module Boleto
-    class Msbank < Base # Banco Itaú
+    class Msbank < Base # Banco MSBANK
       # Usado somente em carteiras especiais com registro para complementar o número do cocumento
       attr_reader :seu_numero
 
@@ -53,6 +53,7 @@ module Brcobranca
       end
 
       def usa_seu_numero?
+        puts %w(109).include?(carteira.to_s)
         %w(109).include?(carteira.to_s)
       end
 
@@ -65,10 +66,8 @@ module Brcobranca
       #
       # @return [String] 1 caracteres numéricos.
       def nosso_numero_dv
-       
+
           "#{carteira}#{nosso_numero}".modulo10
-     
-      
       end
 
       # Calcula o dígito verificador para conta corrente do Msbank.
