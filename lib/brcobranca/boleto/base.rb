@@ -129,7 +129,7 @@ module Brcobranca
       # Dígito verificador do banco
       # @return [Integer] 1 caracteres numéricos.
       def banco_dv
-        banco.modulo11
+        banco.modulo10
       end
 
       # Código da agencia
@@ -205,7 +205,7 @@ module Brcobranca
         puts codigo
         if codigo =~ /^(\d{4})(\d{39})$/
 
-          codigo_dv = codigo.modulo11(
+          codigo_dv = codigo.modulo10(
             multiplicador: (2..9).to_a,
             mapeamento: { 0 => 1, 10 => 1, 11 => 1 }
           ) { |t| 11 - (t % 11) }
