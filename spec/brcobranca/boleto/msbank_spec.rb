@@ -3,7 +3,7 @@
 
 require 'spec_helper'
 
-RSpec.describe Brcobranca::Boleto::Itau do
+RSpec.describe Brcobranca::Boleto::Msbank do
   before do
     @valid_attributes = {
       valor: 0.0,
