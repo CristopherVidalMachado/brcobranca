@@ -67,6 +67,7 @@ module Brcobranca
       def nosso_numero_dv
         if %w(112 126 131 146 150 168 109).include?(carteira)
           "#{carteira}#{nosso_numero}".modulo10
+          
         else
           
         end
