@@ -130,7 +130,7 @@ module Brcobranca
           puts barra_dv
           "#{barra_dv}#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}"
        
-      
+      end
     end
   end
 end
