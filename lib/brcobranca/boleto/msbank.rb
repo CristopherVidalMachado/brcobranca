@@ -53,7 +53,7 @@ module Brcobranca
       end
 
       def usa_seu_numero?
-        %w(198 106 107 122 142 143 195 196 109).include?(carteira.to_s)
+        %w(109).include?(carteira.to_s)
       end
 
       # Dígito verificador do nosso número.
@@ -65,12 +65,10 @@ module Brcobranca
       #
       # @return [String] 1 caracteres numéricos.
       def nosso_numero_dv
-        if %w(112 126 131 146 150 168 109).include?(carteira)
+       
           "#{carteira}#{nosso_numero}".modulo10
-
-        else
-          
-        end
+     
+      
       end
 
       # Calcula o dígito verificador para conta corrente do Msbank.
