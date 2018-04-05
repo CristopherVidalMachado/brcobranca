@@ -6,7 +6,7 @@
         {
             "label": "Configurar projeto",
             "type": "shell",
-            
+            "command": "bundle"
 
         }
     ]
