@@ -197,17 +197,17 @@ module Brcobranca
 
 
           move_more(doc, -14.4, -0.85)
-          doc.show boleto.valor_documento.to_currency
+          # doc.show boleto.valor_documento.to_currency
 
           move_more(doc, 3.4, 0)
-          doc.show boleto.valor_documento.to_currency
+          # doc.show boleto.valor_documento.to_currency
           move_more(doc, 3.58, 0)
-          doc.show boleto.valor_documento.to_currency
+          # doc.show boleto.valor_documento.to_currency
           move_more(doc, 3.6, 0)
-          doc.show boleto.valor_documento.to_currency
+          # doc.show boleto.valor_documento.to_currency
 
           move_more(doc, 3.68, 0)
-          doc.show boleto.valor_documento.to_currency
+          # doc.show boleto.valor_documento.to_currency
 
 
           # doc.show boleto.cedente_endereco
