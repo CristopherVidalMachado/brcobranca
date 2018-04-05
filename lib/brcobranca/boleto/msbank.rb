@@ -126,7 +126,6 @@ module Brcobranca
           barra_dv = "#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}".modulo10
           puts barra_dv
           "#{barra_dv}#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}"
-       
       end
     end
   end
