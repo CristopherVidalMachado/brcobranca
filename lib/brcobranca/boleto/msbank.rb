@@ -53,7 +53,7 @@ module Brcobranca
       end
 
       def usa_seu_numero?
-        puts %w(109).include?(carteira.to_s)
+        
         %w(109).include?(carteira.to_s)
       end
 
@@ -124,7 +124,6 @@ module Brcobranca
       # @return [String] 25 caracteres numéricos.
       def codigo_barras_segunda_parte
           barra_dv = "#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}".modulo10
-          puts barra_dv
           "#{barra_dv}#{nosso_numero}#{nosso_numero_dv}#{agencia}#{conta_corrente}#{conta_corrente_dv}"
       end
     end

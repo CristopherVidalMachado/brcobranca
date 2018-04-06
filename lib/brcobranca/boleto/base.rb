@@ -200,9 +200,7 @@ module Brcobranca
       def codigo_barras
         raise Brcobranca::BoletoInvalido, self unless valid?
         codigo = codigo_barras_primeira_parte # 18 digitos
-        puts codigo
         codigo << codigo_barras_segunda_parte # 25 digitos
-        puts codigo
         if codigo =~ /^(\d{4})(\d{39})$/
 
           codigo_dv = codigo.modulo11(
