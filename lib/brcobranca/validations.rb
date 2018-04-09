@@ -1,5 +1,5 @@
 # coding: utf-8
-# @author Eduardo Reboucas
+
 require 'brcobranca/util/errors'
 
 module Brcobranca

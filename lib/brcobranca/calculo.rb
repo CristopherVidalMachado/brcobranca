@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 #
-# @author Kivanio Barbosa
+
 module Brcobranca
   # Métodos auxiliares de cálculos
   module Calculo

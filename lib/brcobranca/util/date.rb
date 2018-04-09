@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
-#
-# @author Eduardo Reboucas
+
 #
 # Para manter compatibilidade com ActiveModel
 

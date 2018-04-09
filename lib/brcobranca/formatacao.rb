@@ -1,6 +1,4 @@
-# -*- encoding: utf-8 -*-
-#
-# @author Kivanio Barbosa
+
 module Brcobranca
   # Métodos auxiliares de formatação
   module Formatacao

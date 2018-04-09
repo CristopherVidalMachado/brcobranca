@@ -1,4 +1,4 @@
-#
+
 module Brcobranca
   # Métodos auxiliares de formatação de strings
   module FormatacaoString
