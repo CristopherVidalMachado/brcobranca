@@ -224,7 +224,6 @@ module Brcobranca
           if boleto.demonstrativo
             doc.text_area boleto.demonstrativo, width: '18.5 cm', text_align: :left, x: "#{@x} cm", y: "#{@y - 0.9} cm", row_height: '0.4 cm'
           end
-         
         end
 
         # Monta o corpo e rodapé do layout do boleto
